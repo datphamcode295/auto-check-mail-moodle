@@ -1,23 +1,23 @@
 function myfunction(){
     const token = ''
     const userid = 0
-    const access_token = ''
+    const mail_token = ''
     
   
     var response =UrlFetchApp.fetch(`http://e-learning.hcmut.edu.vn/webservice/rest/server.php?wsfunction=core_message_get_messages&wstoken=${token}&newestfirst=1&useridto=${userid}&read=0`)
-  const subjectRegex = /<KEY name="subject">.*/g;
-  const messageRegex = /<KEY name="fullmessage">(.*?)EY>/gs;
-  const idRegex = /<KEY name="id">.*>/g;
+    const subjectRegex = /<KEY name="subject">.*/g;
+    const messageRegex = /<KEY name="fullmessage">(.*?)EY>/gs;
+    const idRegex = /<KEY name="id">.*>/g;
     var subjects = response.getContentText().match(subjectRegex)
     var messages = response.toString().match(messageRegex)
     var messageIds = response.toString().match(idRegex)
-  //  Logger.log(subjects)
+
   
     //sending mail
     if(subjects){
       for(i=0;i<subjects.length;i++){
         var formData = {
-        access_token: access_token,
+        access_token: mail_token,
         subject: subjects[i].substring(27,subjects[i].length-8),
         text: decodeHTMLEntities(messages[i].substring(31,messages[i].length-15))
         };
@@ -28,14 +28,17 @@ function myfunction(){
         'payload' : JSON.stringify(formData)
         };
         UrlFetchApp.fetch('https://postmail.invotes.com/send', options);
-        var time = Date.now()
-        var messageid = parseInt(messageIds[i].substring(22,messageIds[i].length-8));
-        var options = {
+          //mark message as read
+        if(mailRestponse.getResponseCode()<400){
+          var time = Date.now()
+          var messageid = parseInt(messageIds[i].substring(22,messageIds[i].length-8));
+          var options = {
               'method' : 'POST',
               };
-        UrlFetchApp.fetch(`http://e-learning.hcmut.edu.vn/webservice/rest/server.php?wsfunction=core_message_mark_message_read&wstoken=${token}&messageid=${messageid}&timeread=${time}`,options)
-  
+          UrlFetchApp.fetch(`http://e-learning.hcmut.edu.vn/webservice/rest/server.php?wsfunction=core_message_mark_message_read&wstoken=${token}&messageid=${messageid}&timeread=${time}`,options)
         }
+  
+      }
     }
     
     
