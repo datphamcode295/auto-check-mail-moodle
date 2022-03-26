@@ -3,7 +3,6 @@ function myfunction(){
     const userid = 0
     const mail_token = ''
     
-  
     var response =UrlFetchApp.fetch(`http://e-learning.hcmut.edu.vn/webservice/rest/server.php?wsfunction=core_message_get_messages&wstoken=${token}&newestfirst=1&useridto=${userid}&read=0`)
     const subjectRegex = /<KEY name="subject">.*/g;
     const messageRegex = /<KEY name="fullmessage">(.*?)EY>/gs;
@@ -12,7 +11,6 @@ function myfunction(){
     var messages = response.toString().match(messageRegex)
     var messageIds = response.toString().match(idRegex)
 
-  
     //sending mail
     if(subjects){
       for(i=0;i<subjects.length;i++){
@@ -24,7 +22,6 @@ function myfunction(){
         var options = {
         'method' : 'post',
         'contentType': 'application/json',
-        // Convert the JavaScript object to a JSON string.
         'payload' : JSON.stringify(formData)
         };
         UrlFetchApp.fetch('https://postmail.invotes.com/send', options);
@@ -37,13 +34,8 @@ function myfunction(){
               };
           UrlFetchApp.fetch(`http://e-learning.hcmut.edu.vn/webservice/rest/server.php?wsfunction=core_message_mark_message_read&wstoken=${token}&messageid=${messageid}&timeread=${time}`,options)
         }
-  
       }
     }
-    
-    
-  
-  
   }
   function decodeHTMLEntities(text) {
       var entities = [

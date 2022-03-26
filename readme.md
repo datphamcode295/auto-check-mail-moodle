@@ -30,7 +30,9 @@ Trên thanh địa chỉ chúng ta sẽ thấy userid gồm 6 chữ số
 
 #### Email token
 Truy cập link https://postmail.invotes.com/
+
 Nhập mail vào “Your contact email” -> Go 
+
 __Chú ý: mail nhập vào sẽ là mail mà bạn muốn nhận tin nhắn từ hệ thống khi có tin nhắn mới từ el.__
 
 <img src="./imgs/mailtoken1.png">
