@@ -52,6 +52,11 @@ Chọn tạo dự án mới
 <img src="./imgs/ggscript2.png">
 
 Copy + Paste code vào dự án như hình -> điền 3 tham số là 3 thông tin vừa thu thập ở trên -> Ctrl + S để lưu dự án
+```
+    const token = 'a964c82f48069bcea5470b067d8f3'
+    const userid = 1234567
+    const mail_token = 'rqtx4443dlmmnlkxmh4u2'
+```
 
 <img src="./imgs/ggscript3.png">
 
@@ -86,6 +91,14 @@ Trong cửa sổ kế tiếp ta kéo xuống và nhấn vào nút “Cho Phép�
 Và vậy là chúng ta đã hoàn thành hệ thống tự động
 
 <img src="./imgs/done.png">
+
+Khi có tin nhắn trên hệ thống el
+
+<img src="./imgs/result1">
+
+Chúng ta sẽ nhận được mail 
+
+<img src="./imgs/result2.png>
 
 ### Step 3: Stop implement
 Khi muốn xóa dự án chúng ta đến phần thi hành chọn Xóa vĩnh viễn

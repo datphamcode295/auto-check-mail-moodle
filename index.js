@@ -26,14 +26,14 @@ function myfunction(){
         };
         UrlFetchApp.fetch('https://postmail.invotes.com/send', options);
           //mark message as read
-        if(mailRestponse.getResponseCode()<400){
-          var time = Date.now()
-          var messageid = parseInt(messageIds[i].substring(22,messageIds[i].length-8));
-          var options = {
-              'method' : 'POST',
-              };
-          UrlFetchApp.fetch(`http://e-learning.hcmut.edu.vn/webservice/rest/server.php?wsfunction=core_message_mark_message_read&wstoken=${token}&messageid=${messageid}&timeread=${time}`,options)
-        }
+        
+        var time = Date.now()
+        var messageid = parseInt(messageIds[i].substring(22,messageIds[i].length-8));
+        var options = {
+            'method' : 'POST',
+            };
+        UrlFetchApp.fetch(`http://e-learning.hcmut.edu.vn/webservice/rest/server.php?wsfunction=core_message_mark_message_read&wstoken=${token}&messageid=${messageid}&timeread=${time}`,options)
+        
       }
     }
   }
