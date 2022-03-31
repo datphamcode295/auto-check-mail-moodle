@@ -94,11 +94,11 @@ Và vậy là chúng ta đã hoàn thành hệ thống tự động
 
 Khi có tin nhắn trên hệ thống el
 
-<img src="./imgs/result1">
+<img src="./imgs/result1.png">
 
 Chúng ta sẽ nhận được mail 
 
-<img src="./imgs/result2.png>
+<img src="./imgs/result2.png">
 
 ### Step 3: Stop implement
 Khi muốn xóa dự án chúng ta đến phần thi hành chọn Xóa vĩnh viễn
