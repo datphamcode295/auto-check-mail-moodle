@@ -104,3 +104,9 @@ Chúng ta sẽ nhận được mail
 Khi muốn xóa dự án chúng ta đến phần thi hành chọn Xóa vĩnh viễn
 
 <img src="./imgs/delete1.png">
+
+
+### Lỗi thường gặp
+Trong quá trình chạy đôi khi sẽ gặp lỗi quá hạn mức băng thông được báo về mail (như hình dưới) nhưng nó sẽ chỉ ảnh hưởng đến 1 lệnh đó mà không ảnh hưởng đến cả dự án.
+
+<img src="./imgs/error.png">
