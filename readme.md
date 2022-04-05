@@ -51,7 +51,7 @@ Chọn tạo dự án mới
 
 <img src="./imgs/ggscript2.png">
 
-Copy + Paste code vào dự án như hình -> điền 3 tham số là 3 thông tin vừa thu thập ở trên -> Ctrl + S để lưu dự án
+Copy + Paste code (trong file index.js) vào dự án như hình -> điền 3 tham số là 3 thông tin vừa thu thập ở trên -> Ctrl + S để lưu dự án
 ```
     const token = 'a964c82f48069bcea5470b067d8f3'
     const userid = 1234567
