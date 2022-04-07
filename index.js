@@ -3,7 +3,7 @@ function myfunction(){
     const userid = 0
     const mail_token = ''
     
-    var response =UrlFetchApp.fetch(`http://e-learning.hcmut.edu.vn/webservice/rest/server.php?wsfunction=core_message_get_messages&wstoken=${token}&newestfirst=1&useridto=${userid}&read=0`)
+    var response =UrlFetchApp.fetch(`http://e-learning.hcmut.edu.vn/webservice/rest/server.php?wsfunction=core_message_get_messages&wstoken=${token}&newestfirst=1&useridto=${userid}&read=0&type=conversations`)
     const subjectRegex = /<KEY name="subject">.*/g;
     const messageRegex = /<KEY name="fullmessage">(.*?)EY>/gs;
     const idRegex = /<KEY name="id">.*>/g;
