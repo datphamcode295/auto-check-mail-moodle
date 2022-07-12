@@ -1,4 +1,3 @@
-# NOTE: there are some problems with postmail, the code is not working now, so you can find another service like postmail to replace it
 # Auto check mail Moodle
 
 For more documentation on the use of the Moodle apisee the [Moodle api - documentation](https://docs.moodle.org/dev/Web_service_API_functions)
