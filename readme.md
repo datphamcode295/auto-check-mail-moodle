@@ -3,7 +3,7 @@
 For more documentation on the use of the Moodle apisee the [Moodle api - documentation](https://docs.moodle.org/dev/Web_service_API_functions)
 
 ## How to implement
-Đầu tiên, chúng ta cần lấy một số thông tin của tài khoản (access token, user id, mail token)
+
 ### Step 1: Get your information
 Đầu tiên, chúng ta cần lấy một số thông tin của tài khoản (access token, user id, mail token)
 #### Access token
